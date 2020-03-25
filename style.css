@@ -1,0 +1,82 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial;
+    background-color: antiquewhite;
+}
+
+div.student-form, div.student-list {
+    width: 500px;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+    float: left;
+}
+
+div.student-list {
+    width: 1300px;
+}
+
+div.student-list table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+}
+
+div.student-list table th {
+
+}
+
+div.student-list h2 {
+    text-align: center;
+    margin-top: 0;
+    color: slateblue;
+}
+
+h3 {
+    margin-top: 0;
+}
+
+div.student-form label {
+    width: 150px;
+    float: left;
+}
+
+div.student-form input[type = "text"] {
+    width: 200px;
+    margin-bottom: 20px;
+    padding: 3px;
+    background-color: lightyellow;
+}
+
+div.student-form input[type = "date"] {
+    width: 200px;
+    margin-bottom: 20px;
+    padding: 2px;
+}
+
+div.student-form input[type = "radio"] {
+    margin-bottom: 20px;
+}
+
+div.student-form select {
+    padding: 2px;
+    width: 210px;
+
+}
+
+div.student-form input[type = "button"]  {
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 90px;
+    padding: 5px;
+    background-color: yellow;
+}
+
+div.student-form input[type = "reset"]  {
+    margin-top: 20px;
+    border-radius: 10px;
+    width: 90px;
+    padding: 5px;
+    background-color: yellow;
+}

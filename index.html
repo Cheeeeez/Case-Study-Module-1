@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>QUẢN LÝ SINH VIÊN</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>QUẢN LÝ SINH VIÊN</h1>
+<hr>
+<div class="student-form">
+    <form>
+        <h3>Thông tin sinh viên</h3>
+        <label for="full-name">Họ và tên</label>
+        <input type="text" id="full-name" autofocus>
+        <br>
+
+        <label>Giới tính</label>
+        <input type="radio" id="male" name="gender" value="Nam" checked>Nam
+        <input type="radio" id="female" name="gender" value="Nữ">Nữ
+        <br>
+
+        <label for="date-of-birth">Ngày sinh</label>
+        <input type="date" id="date-of-birth">
+        <br>
+
+        <label for="email">Email</label>
+        <input type="text" id="email">
+        <br>
+
+        <label for="phone">Số điện thoại</label>
+        <input type="text" id="phone">
+        <br>
+
+        <label for="hometown">Quê quán</label>
+        <select id="hometown">
+            <option value="Hà Nội">Hà Nội</option>
+            <option value="Thành phố HCM">Thành phố Hồ Chí Minh</option>
+            <option value="Hải Phòng">Hải Phòng</option>
+            <option value="Đà Nẵng">Đà Nẵng</option>
+            <option value="Cần Thơ">Cần Thơ</option>
+        </select>
+        <br>
+
+        <label>&nbsp;</label>
+        <input id="save" type="button" onclick="main()" value="Thêm mới">
+        <input id="reset" type="reset" value="Nhập lại">
+    </form>
+</div>
+
+<div class="student-list">
+    <h2>Danh sách sinh viên</h2>
+    <table id="student-table" border="1" cellpadding="5px">
+        <thead>
+        <tr>
+            <th>STT</th>
+            <th>Họ và tên</th>
+            <th>Giới tính</th>
+            <th>Ngày sinh</th>
+            <th>Email</th>
+            <th>Số điện thoại</th>
+            <th>Quê quán</th>
+            <th>Thao tác</th>
+        </tr>
+        </thead>
+        <tbody id="student-table-body">
+
+        </tbody>
+    </table>
+
+</div>
+<script src="script.js"></script>
+</body>
+</html>
