@@ -4,8 +4,9 @@
     <meta charset="UTF-8">
     <title>QUẢN LÝ SINH VIÊN</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/8a4d4ec110.js" crossorigin="anonymous"></script>
 </head>
-<body>
+<body onload="studentList.getStorage()">
 <h1>QUẢN LÝ SINH VIÊN</h1>
 <hr>
 <div class="student-form">
@@ -43,14 +44,19 @@
         <br>
 
         <label>&nbsp;</label>
-        <input id="save" type="button" onclick="main()" value="Thêm mới">
-        <input id="reset" type="reset" value="Nhập lại">
+        <input id="save" type="button" onclick="studentList.updateList()" value="Thêm mới">
+        <input id="reset" type="reset" value="Nhập lại"><br>
+
     </form>
 </div>
 
 <div class="student-list">
+    <div class="search_area">
+        <input type="search" id="search" onkeyup="studentList.searchStudent(this.value)" placeholder="Tìm kiếm ...">
+        <button onclick="studentList.searchStudent(getElementValue('search'))"><i class="fas fa-search"></i></button>
+    </div>
     <h2>Danh sách sinh viên</h2>
-    <table id="student-table" border="1" cellpadding="5px">
+    <table id="student-table"   border="1" cellpadding="5px">
         <thead>
         <tr>
             <th>STT</th>
