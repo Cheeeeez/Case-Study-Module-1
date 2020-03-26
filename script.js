@@ -35,7 +35,7 @@ let StudentList = function () {
         let email = getElementValue('email');
         let phone = getElementValue('phone');
         let homeTown = getElementValue('hometown');
-
+        // Validate form
         if (!validateEmpty('full-name', fullName) && !validateEmpty('date-of-birth', dateOfBirth) &&
             validateEmail('email', email) && !validateEmpty('phone', phone) && validatePhone('phone', phone)) {
             if (this.currentIndex === DEFAULT_INDEX) {
@@ -53,7 +53,6 @@ let StudentList = function () {
             }
         } else
             return false;
-
     };
 
     this.showList = function () {
@@ -113,7 +112,6 @@ let StudentList = function () {
                 searchList.list.push(this.list[i]);
             searchList.showList();
         }
-
     }
 };
 
