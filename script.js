@@ -66,7 +66,7 @@ let StudentList = function () {
                 <td>${student.email}</td>
                 <td>${student.phone}</td>
                 <td>${student.homeTown}</td>
-                <td><button onclick="studentList.editStudent(${--index})">Sửa</button> | <button onclick="studentList.deleteStudent(${index})">Xóa</button></td>
+                <td><button onclick="studentList.editStudent(${--index})"><i class="fas fa-user-edit"></i></i></button> | <button onclick="studentList.deleteStudent(${index})"><i class="fas fa-user-minus"></i></button></td>
             </tr>`;
         })
     };
@@ -75,10 +75,11 @@ let StudentList = function () {
         this.currentIndex = index;
         let student = this.list[index];
         getElementID('full-name').value = student.fullName;
-        if (student.gender === getElementValue('male')) {
-            getElementID('male').checked;
-        } else
-            getElementID('female').checked;
+        if (student.gender === 'Nam') {
+            getElementID('male').checked = true;
+        } else {
+            getElementID('female').checked = true;
+        }
         getElementID('date-of-birth').value = student.dateOfBirth;
         getElementID('email').value = student.email;
         getElementID('phone').value = student.phone;
@@ -87,9 +88,12 @@ let StudentList = function () {
     };
 
     this.deleteStudent = function (index) {
-        this.list.splice(index, 1);
-        this.setStorage();
-        this.showList();
+        let notification = confirm("Bạn có chắc muốn xóa ?");
+        if (notification) {
+            this.list.splice(index, 1);
+            this.setStorage();
+            this.showList();
+        }
     };
 
     this.setStorage = function () {
@@ -176,5 +180,3 @@ function validateEmail(id, value) {
         return false;
     }
 }
-
-console.log(getElementValue('date-of-birth'));

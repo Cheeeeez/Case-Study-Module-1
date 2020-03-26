@@ -13,7 +13,7 @@
     <form>
         <h3>Thông tin sinh viên</h3>
         <label for="full-name">Họ và tên</label>
-        <input type="text" id="full-name" autofocus>
+        <input type="text" id="full-name" placeholder="Full name" autofocus>
         <br>
 
         <label>Giới tính</label>
@@ -26,11 +26,11 @@
         <br>
 
         <label for="email">Email</label>
-        <input type="text" id="email">
+        <input type="text" id="email" placeholder="example@gmail.com">
         <br>
 
         <label for="phone">Số điện thoại</label>
-        <input type="text" id="phone">
+        <input type="text" id="phone" placeholder="Phone number">
         <br>
 
         <label for="hometown">Quê quán</label>
@@ -52,12 +52,12 @@
 
 <div class="student-list">
     <div class="search_area">
-        <input type="search" id="search" onkeyup="studentList.searchStudent(this.value)" placeholder="Tìm kiếm ...">
-        <button onclick="studentList.searchStudent(getElementValue('search'))"><i class="fas fa-search"></i></button>
+        <input aria-label="Tìm kiếm" type="search" id="search" onkeyup="studentList.searchStudent(this.value)" placeholder="Tìm kiếm ...">
+        <i class="fas fa-search"></i>
     </div>
     <h2>Danh sách sinh viên</h2>
     <table id="student-table"   border="1" cellpadding="5px">
-        <thead>
+        <thead id="student-table-head">
         <tr>
             <th>STT</th>
             <th>Họ và tên</th>

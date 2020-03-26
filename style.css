@@ -2,17 +2,17 @@ body {
     padding: 0;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: floralwhite;
+    background-color: #f7f7f7;
 }
 
 div.student-form, div.student-list {
     width: 25%;
-    border: 1px solid black;
+    border: 1px;
     margin: 10px;
     padding: 10px;
     float: left;
     position: relative;
-    background-color: lightyellow;
+    background-color: #dfe3ee;
 }
 
 div.student-list {
@@ -29,20 +29,20 @@ div.search_area input {
     border-radius: 5px;
 }
 
-div.search_area input:focus {
+div.search_area input:focus, button:focus {
     outline: none;
-}
-
-div.search_area button:focus {
-    outline: none;
-}
-
-div.search_area button {
-    position: absolute;
-    top: 10px;
-    left: 205px;
     background-color: white;
-    border: none;
+}
+
+div.search_area button:hover {
+    cursor: pointer;
+}
+
+div.search_area i {
+    position: absolute;
+    top: 12px;
+    left: 210px;
+    color: lightgray;
 }
 
 div.student-list table {
@@ -54,7 +54,7 @@ div.student-list table {
 div.student-list h2 {
     text-align: center;
     margin-top: 0;
-    color: slateblue;
+    color: royalblue;
 }
 
 h3 {
@@ -66,16 +66,10 @@ div.student-form label {
     float: left;
 }
 
-div.student-form input[type = "text"] {
+div.student-form input[type = "text"], input[type = "date"] {
     width: 200px;
     margin-bottom: 20px;
     padding: 3px;
-}
-
-div.student-form input[type = "date"] {
-    width: 200px;
-    margin-bottom: 20px;
-    padding: 2px;
 }
 
 div.search_area input[type = "search"] {
@@ -97,7 +91,7 @@ div.student-form input[type = "button"] {
     border-radius: 10px;
     width: 90px;
     padding: 5px;
-    background-color: yellow;
+    background-color: dodgerblue;
 }
 
 div.student-form input[type = "reset"] {
@@ -105,9 +99,19 @@ div.student-form input[type = "reset"] {
     border-radius: 10px;
     width: 90px;
     padding: 5px;
-    background-color: yellow;
+    background-color: dodgerblue;
 }
 
-button {
+table button {
     height: 22px;
+    width: 40px;
 }
+
+table i:hover {
+    cursor: pointer;
+}
+
+div.student-form input[type = "reset"]:hover, input[type = "radio"]:hover, input[type = "button"]:hover {
+    cursor: pointer;
+}
+
