@@ -43,13 +43,15 @@ let StudentList = function () {
                 this.list.push(student);
                 this.setStorage();
                 this.showList();
-                console.log(getElementValue('date-of-birth').length);
+                resetForm();
+
             } else {
                 this.list[this.currentIndex] = new Student(fullName, gender, dateOfBirth, email, phone, homeTown);
                 this.setStorage();
                 this.showList();
                 this.currentIndex = DEFAULT_INDEX;
                 getElementID('save').value = "Thêm mới";
+                resetForm();
             }
         } else
             return false;
@@ -118,9 +120,6 @@ let StudentList = function () {
         }
     }
 
-    this.selectStudent = function () {
-
-    }
 };
 
 let studentList = new StudentList();
@@ -183,4 +182,19 @@ function validateEmail(id, value) {
         getElementID(id).style.borderColor = "red";
         return false;
     }
+}
+
+function resetForm() {
+    getElementID('full-name').value = "";
+    getElementID('full-name').style.borderColor = "white";
+    getElementID('male').checked = true;
+    getElementID('male').style.borderColor = "white";
+    getElementID('date-of-birth').value = "";
+    getElementID('date-of-birth').style.borderColor = "white";
+    getElementID('email').value = "";
+    getElementID('email').style.borderColor = "white";
+    getElementID('phone').value = "";
+    getElementID('phone').style.borderColor = "white";
+    getElementID('hometown').value = "Hà Nội";
+    getElementID('hometown').style.borderColor = "white";
 }
