@@ -86,20 +86,13 @@ div.student-form select {
     width: 210px;
 }
 
-div.student-form input[type = "button"] {
+div.student-form input[type = "button"], input[type = "reset"] {
     margin-top: 20px;
     border-radius: 10px;
     width: 90px;
     padding: 5px;
-    background-color: dodgerblue;
-}
-
-div.student-form input[type = "reset"] {
-    margin-top: 20px;
-    border-radius: 10px;
-    width: 90px;
-    padding: 5px;
-    background-color: dodgerblue;
+    background-color: forestgreen;
+    color: white;
 }
 
 table button {
@@ -114,4 +107,11 @@ table i:hover {
 div.student-form input[type = "reset"]:hover, input[type = "radio"]:hover, input[type = "button"]:hover {
     cursor: pointer;
 }
+
+header {
+    background-color: #3b5998;
+    color: white;
+    margin-top: -10px;
+}
+
 

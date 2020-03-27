@@ -117,6 +117,10 @@ let StudentList = function () {
             searchList.showList();
         }
     }
+
+    this.selectStudent = function () {
+
+    }
 };
 
 let studentList = new StudentList();
